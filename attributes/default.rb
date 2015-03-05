@@ -1,0 +1,1 @@
+default['serverdensity-inviqa']['tags'] = []
