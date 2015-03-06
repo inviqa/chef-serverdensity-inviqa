@@ -13,6 +13,15 @@ To install, include `serverdensity-inviqa` in the run list. You will need to sup
 - `node['serverdensity']['token']` - Account API token, should be stored securely
 - `node['serverdensity-inviqa']['tags']` - An array of tag IDs that servers should be added to
 
+### Monitoring Apache
+
+Serverdensity requires some specific Apache configuration. This is supplied by the apache recipe.
+
+To enable Apache config, include `serverdensity-inviqa::apache` in the run list. If your server uses basic-auth protection the following config options need to be supplied:
+
+- `node['serverdensity']['apache_status_user']`
+- `node['serverdensity']['apache_status_pass']`
+
 ## License and Author
 
 Author:: Shane Auckland (sauckland@inviqa.com)

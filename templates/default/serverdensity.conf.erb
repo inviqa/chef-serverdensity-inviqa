@@ -1,0 +1,10 @@
+<IfModule mod_status.c>
+  ExtendedStatus On
+
+  <Location /server-status>
+    SetHandler server-status
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1 <%= node.ipaddress %>
+  </Location>
+</IfModule>
