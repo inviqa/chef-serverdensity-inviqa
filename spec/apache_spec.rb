@@ -23,11 +23,6 @@ describe 'serverdensity-inviqa::apache' do
     expect(chef_run).to render_file('/etc/httpd/conf-available/serverdensity.conf').with_content('Allow from 127.0.0.1 1.2.3.4')
   end
 
-  it 'should restart the server density agent' do
-    resource = chef_run.apache_conf('serverdensity')
-    expect(resource).to notify('service[sd-agent]').to(:restart).delayed
-  end
-
   context 'mod_status is disabled' do
     before {
       allow(File).to receive(:symlink?).and_call_original
