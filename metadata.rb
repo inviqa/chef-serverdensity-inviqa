@@ -6,6 +6,6 @@ description      'Provides additional ServerDensity configuration'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
-depends 'serverdensity'
+depends 'serverdensity', '~> 2.1.3'
 depends 'apache2'
 
