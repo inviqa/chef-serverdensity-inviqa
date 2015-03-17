@@ -24,6 +24,15 @@ To enable Apache config, include `serverdensity-inviqa::apache` in the run list.
 - `node['serverdensity']['apache_status_user']`
 - `node['serverdensity']['apache_status_pass']`
 
+## Contributing
+
+Comments, issues and pull requests are all welcome.
+
+To get started working on the repo; fork it, clone it, install the gems and run the tests:
+ 
+    bundle install
+    bundle exec rake test
+
 ## License and Author
 
 Author:: Shane Auckland (sauckland@inviqa.com)
