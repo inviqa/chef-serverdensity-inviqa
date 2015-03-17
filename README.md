@@ -1,5 +1,7 @@
 # serverdensity-inviqa
 
+![https://travis-ci.org/inviqa/chef-serverdensity-inviqa](https://travis-ci.org/inviqa/chef-serverdensity-inviqa.svg?branch=master)
+
 This cookbook provides additional Server Density configuration not handled by the official cookbook.
 
 ## Usage
