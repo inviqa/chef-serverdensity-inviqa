@@ -22,3 +22,7 @@ suites:
     run_list:
       - recipe[serverdensity-inviqa::default]
     attributes:
+  - name: plugin_install
+    run_list:
+      - recipe[serverdensity-inviqa::plugin_install]
+    attributes:
