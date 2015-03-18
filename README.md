@@ -24,6 +24,18 @@ To enable Apache config, include `serverdensity-inviqa::apache` in the run list.
 - `node['serverdensity']['apache_status_user']`
 - `node['serverdensity']['apache_status_pass']`
 
+### Plugins
+
+Serverdensity allows plugins to be installed to provide additional monitoring functionality.
+These can be easily enabled by including the `serverdensity-inviqa::plugin_install` recipe in your runlist and the following `key` configuration option.
+All plugins defined will be looped over and installed.
+
+- `node['serverdensity-inviqa']['plugins']['<PLUGIN_NAME>']['key']` - The key provided by serverdensity when the plugin is installed into the serverdensity account.
+
+If the installation directory of the server density agent is not `/usr/bin/sd-agent/` for your installation, you will need to provide 
+`node['serverdensity-inviqa']['installation']['directory']` for the plugin installation to work.
+
+
 ## Contributing
 
 Comments, issues and pull requests are all welcome.
