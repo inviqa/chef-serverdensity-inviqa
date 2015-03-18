@@ -1,6 +1,16 @@
 describe 'serverdensity-inviqa::plugin_install' do
   context 'default run' do
     let(:chef_run) {
+      ChefSpec::SoloRunner.new.converge(described_recipe)
+    }
+
+    it 'should install no plugins by default' do
+      expect(chef_run.node['serverdensity-inviqa']['plugins']).to eq({})
+    end
+  end
+
+  context 'plugins configured' do
+    let(:chef_run) {
       ChefSpec::SoloRunner.new do |node|
         node.set['serverdensity-inviqa']['plugins'] = {
           'memcached' => {
