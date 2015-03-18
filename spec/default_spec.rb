@@ -6,6 +6,10 @@ describe 'serverdensity-inviqa::default' do
     it 'should include the serverdensity base recipe' do
       expect(chef_run).to include_recipe('serverdensity::default')
     end
+
+    it 'should declare the base installation directory' do
+      expect(chef_run.node['serverdensity-inviqa']['installation']['directory']).to eq('/usr/bin/sd-agent/')
+    end
   end
 
   context 'no tags supplied' do
