@@ -9,7 +9,7 @@ def sandbox_path
 end
 
 def cookbook_name
-  File.basename(File.dirname(__FILE__))
+  File.basename(File.dirname(__FILE__)).sub(/^chef-/, '')
 end
 
 # test task
