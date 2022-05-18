@@ -106,7 +106,7 @@ GEM
     logging (2.3.0)
       little-plugger (~> 1.1)
       multi_json (~> 1.14)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.8.0)
     minitar (0.9)
     mixlib-archive (0.4.20)
       mixlib-log
@@ -136,8 +136,9 @@ GEM
       net-ssh (>= 2.6.5)
       net-ssh-gateway (>= 1.2.0)
     net-telnet (0.1.1)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.13.5)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nori (2.6.0)
     octokit (4.18.0)
       faraday (>= 0.9)
@@ -161,6 +162,7 @@ GEM
     polyglot (0.3.5)
     proxifier (1.0.3)
     public_suffix (4.0.5)
+    racc (1.6.0)
     rack (2.2.3)
     rake (13.0.1)
     retryable (3.0.5)
@@ -275,7 +277,7 @@ DEPENDENCIES
   chef (~> 13.0)
   chefspec
   foodcritic
-  nokogiri (~> 1.10.8)
+  nokogiri (~> 1.13.5)
   rake
   test-kitchen
 
